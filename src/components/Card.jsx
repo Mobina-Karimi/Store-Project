@@ -11,11 +11,12 @@ function Card({data}) {
     // const result = useCart()
     const [state, dispatch] = useCart()
     // console.log(result)
+    console.log(state)
 
     const clickHandler = () => {
-        dispatch({tyoe: "add", payload: data})
+        dispatch({type: "ADD_ITEM", payload: data})
     }
-    
+
   return (
     <div className={styles.card}>
         <img src={image} alt={title} loading="lazy"/>
