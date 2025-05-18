@@ -1,23 +1,34 @@
-import { ImSearch } from "react-icons/im"
 import Card from "../components/Card"
 import Loader from "../components/Loader"
 import { useProducts } from "../context/ProductContext"
 import styles from "./ProductsPage.module.css"
 import { useEffect, useState } from "react"
-import { FaListUl } from "react-icons/fa"
-import { filterProducts, searchProducts } from "../helpers/helper";
+import { filterProducts, getInitialQuery, searchProducts } from "../helpers/helper";
+import { useSearchParams } from "react-router-dom"
+import SearchBox from "../components/SearchBox"
+import SideBar from "../components/SideBar"
 
 function ProductsPage() {
   const products = useProducts()
   const [search, setSearch] =useState("")
   const [displayed, setDisplayed] =useState([])
   const [query, setQuery] = useState({})
+  const [searchParams,setSearchParams] = useSearchParams()
 
   useEffect(() => {
     setDisplayed(products)
+    // const query ={}
+    // const category = searchParams.get("category")
+    // const search = searchParams.get("search")
+    // if(category) query.category = category
+    // if(search) query.search = search
+    // setQuery(query)
+    setQuery(getInitialQuery(searchParams))
   } ,[products])
 
   useEffect(() => {
+    setSearchParams(query)
+    setSearch(query.search || "")
     // console.log(query)
     let finalProducts = searchProducts(products, query.search)
     finalProducts = filterProducts(finalProducts, query.category)
@@ -25,51 +36,16 @@ function ProductsPage() {
     setDisplayed(finalProducts)
   }, [query])
 
-  const searchHandler = () => {
-    // console.log("search")
-    setQuery(query => ({...query, search}))
-  }
-
-  const categoryHandler = (event) => {
-    const {tagName} = event.target
-    const category = event.target.innerText.toLowerCase()
-
-    if(tagName !== "LI") return
-
-    setQuery(query => ({...query, category}))
-    // console.log(category)
-  }
   // console.log(products)
   return (
     <>
-    <div>
-      <input 
-        type="text" 
-        placeholder="search..." 
-        value={search} 
-        onChange={e => setSearch(e.target.value.toLowerCase().trim())}/>
-      <button onClick={searchHandler}>
-        <ImSearch/>
-      </button>
-    </div>
+    <SearchBox search={search} setSearch={setSearch} setQuery={setQuery}/>
     <div className={styles.container}>
       <div className={styles.products}>
         {!displayed.length && <Loader/>}
         {displayed.map(p => <Card key={p.id} data={p}/>)}
       </div>
-      <div>
-        <div>
-          <FaListUl/>
-          <p>Categories</p>
-        </div>
-        <ul onClick={categoryHandler}>
-          <li>All</li>
-          <li>Electronics</li>
-          <li>Jewelery</li>
-          <li>Men's Clothing</li>
-          <li>Women's Clothing</li>
-        </ul>
-      </div>
+      <SideBar query={query} setQuery={setQuery}/>
     </div>
     </>
   )

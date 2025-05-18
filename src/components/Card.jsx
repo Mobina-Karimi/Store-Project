@@ -2,9 +2,20 @@ import { TbListDetails, TbShoppingBagCheck } from "react-icons/tb"
 import { Link } from "react-router-dom"
 import {shortenText} from "../helpers/helper"
 import styles from "./Card.module.css"
+import { useCart } from "../context/CartContext"
 
 function Card({data}) {
     const {id, title, image, price} = data
+
+    // useCart()
+    // const result = useCart()
+    const [state, dispatch] = useCart()
+    // console.log(result)
+
+    const clickHandler = () => {
+        dispatch({tyoe: "add", payload: data})
+    }
+    
   return (
     <div className={styles.card}>
         <img src={image} alt={title} loading="lazy"/>
@@ -15,7 +26,7 @@ function Card({data}) {
                 <TbListDetails/>
             </Link>
             <div>
-                <button>
+                <button onClick={clickHandler}>
                     <TbShoppingBagCheck/>
                 </button>
             </div>
