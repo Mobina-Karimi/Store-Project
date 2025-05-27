@@ -8,6 +8,7 @@ function Layout({children}) {
   return (
     <>
     <header className={styles.header}>
+      <img src="/Logo.png"/>
       <Link to="/products">Mobina Shop</Link>
       <Link to="/checkout">
        <div>

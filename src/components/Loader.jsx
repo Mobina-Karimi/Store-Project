@@ -4,7 +4,7 @@ import styles from "./Loader.module.css"
 function Loader() {
   return (
     <div className={styles.loader}>
-        <RotatingLines width="100px" height="100px" strokeColor="#f25d42" strokeWidth="3"/>
+        <RotatingLines width="100px" height="100px" strokeColor="#e542fe" strokeWidth="3"/>
     </div>
   )
 }

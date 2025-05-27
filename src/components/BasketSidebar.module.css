@@ -1,7 +1,7 @@
 .sidebar {
     width: 300px;
     margin-right: 30px;
-    border: 2px dashed #fe5d42;
+    border: 2px dashed #e542fe;
     border-radius: 30px;
     padding: 20px;
 }
@@ -9,7 +9,7 @@
 .sidebar div {
     display: flex;
     align-items: center;
-    color: #fe5d42;
+    color: #e542fe;
     margin-bottom: 15px;
 }
 
@@ -26,7 +26,7 @@
 .sidebar button {
     width: 100%;
     margin-top: 40px;
-    background-color: #fe5d42;
+    background-color: #e542fe;
     color: #fff;
     border: none;
     font-size: 1.1rem;
