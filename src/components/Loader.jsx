@@ -1,10 +1,16 @@
-import { RotatingLines } from "react-loader-spinner"
+import { ring } from "ldrs";
 import styles from "./Loader.module.css"
+import { Ring } from "ldrs/react"
+import 'ldrs/react/Ring.css';
+
 
 function Loader() {
+  ring.register();
   return (
     <div className={styles.loader}>
-        <RotatingLines width="100px" height="100px" strokeColor="#e542fe" strokeWidth="3"/>
+      <div>
+        <Ring size={50} speed={1.5} bgOpacity={0.25} color="#e542fe" />
+      </div>
     </div>
   )
 }
