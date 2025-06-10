@@ -22,6 +22,8 @@
 }
 
 .header div {
+    display: flex;
+    align-items: center;
     font-size: 1.6rem;
     background-color: #fff;
     text-align: center;
@@ -31,7 +33,14 @@
     border-radius: 9px;
     padding: 2px;
     position: relative;
+    margin: 1rem;
 }
+.headerIcon:last-child {
+    margin: 2.5rem;
+}
+/* .headerIcon div {
+    margin: 3px;
+} */
 
 .header span {
     font-size: 0.9rem;

@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width: 35vw;
+    height: 73vh ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background: linear-gradient(135deg, #6638bc, #e542fe); */
+    background: linear-gradient(135deg, #e542fe, #f3a6ff);
+    border-radius: 5px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(97, 97, 97, 0.5);
+}
+.form h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: xx-large;
+}
+.form input {
+    height: 2.5rem;
+    border-radius: 2px;
+    border: none;
+    padding: 5px;
+}
+.loginbtn {
+    height: 2.5rem;
+    border-radius: 2px;
+    border: dashed 1px #68406e;
+    margin-top: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.loginbtn:hover {
+    border: dashed 1px #fff;
+    background: linear-gradient(135deg, #68406e, #e542fe);
+    color: #fff;
+}
+.media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.media span {
+    margin-bottom: 10px;
+}
+.media button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin: 2px;
+    border: 1px dashed #68406e;
+    cursor: pointer;
+}
+.media button:first-child {
+    color: blue;
+}
+.media button:nth-child(2) {
+    color: #1DA1F2;
+}
+.media button:last-child {
+    color: red;
+}
+.media button:hover {
+    background: #68406e;
+    color: #fff;
+    border: 1px dashed #fff;
+}
+.form a:hover {
+    color: #000;
+}
+@media (max-width: 768px) {
+    .form {
+        width: 60vw;
+    }
+}
