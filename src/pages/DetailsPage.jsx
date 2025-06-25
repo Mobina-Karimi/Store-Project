@@ -1,15 +1,23 @@
 import { Link, useParams } from "react-router-dom"
-import { useProductDetails } from "../context/ProductContext"
+// import { useProductDetails } from "../context/ProductContext"
 import Loader from "../components/Loader"
 import { SiOpenproject } from "react-icons/si"
 import { IoMdPricetag } from "react-icons/io"
 import { FaArrowLeft } from "react-icons/fa"
 import styles from "./DetailsPage.module.css"
+import { useSelector, useDispatch } from "react-redux"
+import { fetchProducts } from "../features/product/productSlice"
+import { useEffect } from "react"
 
 function DetailsPage() {
   const {id} = useParams()
-  const productDetails = useProductDetails(+id)
-  // console.log(productDetails)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  },[])
+  // const productDetails = useProductDetails(+id)
+  const productDetails = useSelector(store => store.product.products.find(i => i.id == +id))
   if(!productDetails) return <Loader/>
   return (
     <div className={styles.container}>

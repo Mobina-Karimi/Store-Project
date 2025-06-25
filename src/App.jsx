@@ -3,16 +3,16 @@ import ProductsPage from "./pages/ProductsPage"
 import DetailsPage from "./pages/DetailsPage"
 import CheckoutPage from "./pages/CheckoutPage"
 import PageNotFound from "./pages/404"
-import ProductsProvider from "./context/ProductContext"
-import CartProvider from "./context/CartContext"
+// import ProductsProvider from "./context/ProductContext"
+// import CartProvider from "./context/CartContext"
 import Layout from "./layout/Layout"
 import LoginPage from "./pages/LoginPage"
 
 function App() {
 
   return (
-    <CartProvider>
-      <ProductsProvider>
+    // <CartProvider>
+      // <ProductsProvider>
         <Layout>
           <Routes>
           <Route path="/" element={<Navigate  to="/products" replace/>}/>
@@ -23,9 +23,10 @@ function App() {
           <Route path="/*" element={<PageNotFound/>}/>
          </Routes>
         </Layout>
-      </ProductsProvider>
-    </CartProvider>
+      // </ProductsProvider>
+    // </CartProvider>
   )
 }
 
 export default App
+
