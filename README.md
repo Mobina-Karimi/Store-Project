@@ -1,6 +1,8 @@
 ## Project Description
 
-A comprehensive e-commerce application built with React, utilizing Context API and the useReducer hook for efficient state management. This project fetches real-time product data from a live API and offers features like product detail viewing, shopping cart functionality, and a checkout process.es.
+A comprehensive e-commerce application built with React. This project fetches real-time product data from a live API and offers features like product detail viewing, shopping cart functionality, and a checkout process.
+
+**Update:** State management has been migrated from Context API (with useReducer) to Redux Toolkit for better scalability and maintainability.
 
 ### Features
 
@@ -13,7 +15,7 @@ A comprehensive e-commerce application built with React, utilizing Context API a
    <li>Add products to the cart.</li>
    <li>View cart items with quantities.</li>
    <li>Remove individual items.</li>
-   <li>Update item quantities</li>
+   <li>Update item quantities.</li>
   </ul>
  <li>Checkout Page:</li>
   <ul>
@@ -21,7 +23,7 @@ A comprehensive e-commerce application built with React, utilizing Context API a
    <li>View total amount due.</li>
    <li>Proceed to order confirmation.</li>
   </ul>
-<li>State Management: Implements React's Context API combined with useReducer for managing global state across components.</li>
+ <li>State Management: Uses Redux Toolkit for efficient and scalable global state management across components.</li>
 </ul>
 
 ### Contributing
@@ -30,4 +32,4 @@ If you would like to contribute to this repository, feel free to submit a pull r
 
 ### My Website Link
 
-Check out my store web live <a href="https://mobina-store.vercel.app/products">Here </a>
+Check out my store web live <a href="https://mobina-store.vercel.app/products">Here</a>
