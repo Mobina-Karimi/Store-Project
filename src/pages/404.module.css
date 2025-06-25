@@ -5,6 +5,8 @@
     flex-direction: row;
     padding: 20px;
     margin: 20px;
+    max-width: 1250px;
+    min-height: 100vh;
 }
 .PNFContainer div img {
     width: 400px;
@@ -25,6 +27,11 @@
     color: #e542fe;
     border: 1px dashed #e542fe;
     border-radius: 5px;
+}
+.PNFtxt a:hover {
+    background: linear-gradient(135deg, #68406e, #e542fe);
+    color: #fff;
+    border: 1px dashed #fff;
 }
 
 @media  (max-width: 600px) {

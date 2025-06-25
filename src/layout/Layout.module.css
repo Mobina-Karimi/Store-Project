@@ -2,65 +2,86 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e542fe;
+    background: linear-gradient(135deg, #e542fe, #f3a6ff);
     color: #fff;
-    padding: 10px 20px;
-    margin: 0 10px 60px;
-    border-radius: 10px;
+    padding: 35px 20px;
+    box-shadow: 0 4px 10px rgba(229, 66, 254, 0.5);
     height: 60px;
     overflow: hidden;
 }
 
 .header img {
-    width: 45px;
-    height: 45px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .header a {
-    font-size: 1.5rem;
-    font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  transition: color 0.3s ease;
 }
 
-.header div {
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    background-color: #fff;
-    text-align: center;
-    color: #e542fe;
-    height: 35px;
-    width: 35px;
-    border-radius: 9px;
-    padding: 2px;
-    position: relative;
-    margin: 1rem;
+.header a:hover {
+  color: #ffd6ff;
 }
-.headerIcon:last-child {
-    margin: 2.5rem;
-}
-/* .headerIcon div {
-    margin: 3px;
-} */
 
-.header span {
-    font-size: 0.9rem;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: -10px;
-    right: -10px;
+.headerIcon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #fff;
+  color: #e542fe;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(229, 66, 254, 0.4);
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.iconWrapper:hover {
+  background-color: #e542fe;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(229, 66, 254, 0.7);
+}
+
+.headerIcon span {
+  font-size: 0.85rem;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
-    text-align: center;
-    background-color: #e542fe;
-    padding: 20px;
-    margin: 10px;
-    margin-top: 80px;
-    border-radius: 10px;
-    color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, #e542fe, #f3a6ff);
+  padding: 25px 20px;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -3px 10px rgba(229, 66, 254, 0.5);
+  user-select: none;
 }

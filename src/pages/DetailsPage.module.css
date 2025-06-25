@@ -1,9 +1,13 @@
 .container {
     display: flex;
     align-items: flex-start;
-    min-height: 1000px;
     width: 100%;
-}
+    margin: 50px auto;
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: 10px;
+    border-color: #f9fafc;
+    }
 
 .container img {
     width: 300px;

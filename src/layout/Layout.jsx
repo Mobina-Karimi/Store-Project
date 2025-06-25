@@ -13,10 +13,12 @@ function Layout({children}) {
       <Link to="/products">Mobina Shop</Link>
       <div  className={styles.headerIcon}>
         <Link to="/login">
-          <MdOutlineAccountCircle/>
+          <div className={styles.iconWrapper}>
+            <MdOutlineAccountCircle/>
+          </div>
         </Link>
         <Link to="/checkout">
-          <div>
+          <div className={styles.iconWrapper}>
             <PiShoppingCartSimpleBold/>
             {!!state.itemsCounter && <span>{state.itemsCounter}</span>}
           </div>

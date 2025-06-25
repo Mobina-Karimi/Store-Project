@@ -1,6 +1,11 @@
 .container {
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    max-width: 1250px;
+    min-height: 100vh;
+    padding: 10px;
+    border-color: #f9fafc;
 }
 
 .products {
