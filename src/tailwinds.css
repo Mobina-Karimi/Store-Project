@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+.basketCards-btn {
+    @apply flex items-center bg-[#e542fe] text-black border-none text-2xl h-6 w-6 p-0.5 rounded-lg cursor-pointer
+}
+
+.sidebarDivs { @apply flex items-center text-[#e542fe] mb-4}
+
+.sidebarSvgs { @apply text-xl mr-1.5}
+
+.sidebarSpans { @apply text-gray-500 ml-2.5}
+
+.cardBtn { @apply bg-[#e542fe] text-white border-none text-2xl h-8 w-8 p-0.5 rounded-lg cursor-pointer}
+
+.layoutLinks {@apply font-bold text-3xl text-white no-underline tracking-[1.2px] transition-colors 
+    duration-300 ease-in-out hover:text-[#ffd6ff]
+}
+
+.layoutIcon { @apply flex items-center content-center w-11 h-11 bg-white text-[#e542fe] rounded-xl 
+    shadow-[0_2px_8px_rgba(229,66,254,0.4)] relative cursor-pointer transition-colors duration-300
+    ease-in-out hover:bg-[#e542fe] hover:text-white shadow-[0_4px_12px_rgba(229,66,254,0.7)] pl-1.5
+}

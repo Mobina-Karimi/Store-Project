@@ -18,10 +18,12 @@ function CheckoutPage() {
   }
 
   return (
-    <div className={styles.container}>
+    // <div className={styles.container}>
+    <div className="flex justify-between items-start p-2.5 my-12 mx-auto max-w-7xl min-h-[100vh] border-gray-300">
       {/* <BasketSidebar state={state} clickHandler={clickHandler}/> */}
       <BasketSidebar state={state}/>
-      <div className={styles.products}>
+      {/* <div className={styles.products}> */}
+      <div className="w-full">
         {state.selectedItems.map(product => 
         <BasketCard key={product.id} data={product}/>)}
         {/* // <BasketCard key={product.id} data={product} clickHandler={clickHandler}/>)} */}
