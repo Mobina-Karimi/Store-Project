@@ -1,7 +1,7 @@
 import Card from "../components/Card"
 import Loader from "../components/Loader"
 // import { useProducts } from "../context/ProductContext"
-import styles from "./ProductsPage.module.css"
+// import styles from "./ProductsPage.module.css"
 import { useEffect, useState } from "react"
 import { filterProducts, getInitialQuery, searchProducts } from "../helpers/helper";
 import { useSearchParams } from "react-router-dom"
@@ -42,8 +42,10 @@ function ProductsPage() {
   return (
     <>
     <SearchBox search={search} setSearch={setSearch} setQuery={setQuery}/>
-    <div className={styles.container}>
-      <div className={styles.products}>
+    {/* <div className={styles.container}> */}
+    <div className="flex justify-between m-auto max-w-7xl min-h-[100vh] p-2.5 border-gray-300">
+      {/* <div className={styles.products}> */}
+      <div className="w-full flex flex-wrap justify-between">
         {/* {!displayed.length && <Loader/>} */}
         {loading && <Loader/>}
         {displayed.map(p => <Card key={p.id} data={p}/>)}

@@ -14,7 +14,7 @@ function Layout({children}) {
     {/* <header className={styles.header}> */}
     <header className="flex items-center justify-between bg-linear-to-r from-[#e542fe] to-[#f3a6ff] text-white py-9 px-5 shadow-[0_4px_10px_rgba(229,66,254,0.5)] h-16 overflow-hidden">
       {/* <img src="/Logo.png"/> */}
-      <img src="/Logo.png" className="w-14 h-14 object-contain rounded-lg"/>
+      <img src="/Logo.png" className="w-13 h-13 object-contain rounded-lg"/>
       {/* <Link to="/products">Mobina Shop</Link> */}
       <Link to="/products" className="layoutLinks">Mobina Shop</Link>
       {/* <div  className={styles.headerIcon}> */}
