@@ -2,8 +2,8 @@
 
 A comprehensive e-commerce application built with React. This project fetches real-time product data from a live API and offers features like product detail viewing, shopping cart functionality, and a checkout process.
 
-**Update 1:** State management has been migrated from Context API (with useReducer) to Redux Toolkit for better scalability and maintainability.
-**Update 2:** UI Styling Migration: The entire project has been migrated from Styled Components to Tailwind CSS for Faster styling and better performance.
+<p>Update 1: State management has been migrated from Context API (with useReducer) to Redux Toolkit for better scalability and maintainability.</p>
+<p>Update 2: UI Styling has been migrated from Styled Components to Tailwind CSS for Faster styling and better performance.</p>
 
 ### Features
 
