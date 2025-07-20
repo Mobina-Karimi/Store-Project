@@ -2,7 +2,8 @@
 
 A comprehensive e-commerce application built with React. This project fetches real-time product data from a live API and offers features like product detail viewing, shopping cart functionality, and a checkout process.
 
-**Update:** State management has been migrated from Context API (with useReducer) to Redux Toolkit for better scalability and maintainability.
+**Update 1:** State management has been migrated from Context API (with useReducer) to Redux Toolkit for better scalability and maintainability.
+**Update 2:** UI Styling Migration: The entire project has been migrated from Styled Components to Tailwind CSS for Faster styling and better performance.
 
 ### Features
 
@@ -24,12 +25,13 @@ A comprehensive e-commerce application built with React. This project fetches re
    <li>Proceed to order confirmation.</li>
   </ul>
  <li>State Management: Uses Redux Toolkit for efficient and scalable global state management across components.</li>
+ <li>Styling: Tailwind CSS for fast, responsive, and modern UI design.</li>
 </ul>
 
 ### Contributing
 
 If you would like to contribute to this repository, feel free to submit a pull request or open an issue. We welcome contributions from the community to make these projects even better!
 
-### My Website Link
+### My Website Live Demo
 
-Check out my store web live <a href="https://mobina-store.vercel.app/products">Here</a>
+Check out my store live here: <a href="https://mobina-store.vercel.app/products"> My Website</a>
